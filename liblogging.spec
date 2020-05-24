@@ -13,6 +13,7 @@ Group:		Libraries
 Source0:	https://download.rsyslog.com/liblogging/%{name}-%{version}.tar.gz
 # Source0-md5:	f215c7e7ac6cfd1f5dabdba08c522b29
 URL:		http://www.liblogging.org/
+BuildRequires:	pkgconfig
 %{?with_systemd:BuildRequires:	systemd-devel >= 1:209}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
