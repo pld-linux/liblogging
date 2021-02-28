@@ -72,9 +72,7 @@ Ten pakiet zawiera bibliotekę statyczną liblogging-rfc3195.
 Summary:	API documentation for logging-rfc3195 library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki logging-rfc3195
 Group:		Documention
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description rfc3195-apidocs
 API documentation for logging-rfc3195 library.
