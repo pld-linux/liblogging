@@ -163,12 +163,12 @@ rm -rf $RPM_BUILD_ROOT
 %files rfc3195
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%attr(755,root,root) %{_libdir}/liblogging-rfc3195.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/liblogging-rfc3195.so.0
+%{_libdir}/liblogging-rfc3195.so.*.*.*
+%ghost %{_libdir}/liblogging-rfc3195.so.0
 
 %files rfc3195-devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/liblogging-rfc3195.so
+%{_libdir}/liblogging-rfc3195.so
 %dir %{_includedir}/liblogging
 %{_includedir}/liblogging/liblogging.h
 %{_includedir}/liblogging/settings.h
@@ -190,13 +190,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/stdlogctl
-%attr(755,root,root) %{_libdir}/liblogging-stdlog.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/liblogging-stdlog.so.0
+%{_libdir}/liblogging-stdlog.so.*.*.*
+%ghost %{_libdir}/liblogging-stdlog.so.0
 %{_mandir}/man1/stdlogctl.1*
 
 %files stdlog-devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/liblogging-stdlog.so
+%{_libdir}/liblogging-stdlog.so
 %dir %{_includedir}/liblogging
 %{_includedir}/liblogging/stdlog.h
 %{_pkgconfigdir}/liblogging-stdlog.pc
