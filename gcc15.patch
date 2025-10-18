@@ -1,0 +1,21 @@
+--- liblogging-1.0.6/rfc3195/src/beeplisten.c~	2016-04-15 09:30:40.000000000 +0200
++++ liblogging-1.0.6/rfc3195/src/beeplisten.c	2025-10-18 21:02:13.026660671 +0200
+@@ -65,6 +65,7 @@
+  * private members                                                   *
+  * ################################################################# */
+ #if FEATURE_UNIX_DOMAIN_SOCKETS == 1
++extern srRetVal sbSock_InitUXDOMSOCK(sbSockObj **ppThis, char *pszSockName, int iSockType);
+ /**
+  * Process an incoming Unix Domain Socket message.
+  */
+--- liblogging-1.0.6/rfc3195/src/beepframe.c~	2016-04-15 09:30:40.000000000 +0200
++++ liblogging-1.0.6/rfc3195/src/beepframe.c	2025-10-18 21:03:48.166660673 +0200
+@@ -167,7 +167,7 @@
+  *                       The channel object is updated, e.g. with a
+  *                       new seqno.
+  */
+-sbFramActualRecvFramCommonBody(sbFramObj* pThis,sbChanObj *pChan)
++int sbFramActualRecvFramCommonBody(sbFramObj* pThis,sbChanObj *pChan)
+ {
+ 	unsigned iToRcv;
+ 	char szTrailer[6];

@@ -7,11 +7,12 @@ Summary:	An easy to use logging library
 Summary(pl.UTF-8):	Łatwa w użyciu biblioteka do logowania
 Name:		liblogging
 Version:	1.0.6
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries
 Source0:	https://download.rsyslog.com/liblogging/%{name}-%{version}.tar.gz
 # Source0-md5:	f215c7e7ac6cfd1f5dabdba08c522b29
+Patch0:		gcc15.patch
 URL:		http://www.liblogging.org/
 BuildRequires:	pkgconfig
 %{?with_systemd:BuildRequires:	systemd-devel >= 1:209}
@@ -130,6 +131,7 @@ Ten pakiet zawiera bibliotekę statyczną liblogging-stdlog.
 
 %prep
 %setup -q
+%patch -P0 -p1
 
 %build
 %configure \
