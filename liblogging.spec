@@ -7,7 +7,7 @@ Summary:	An easy to use logging library
 Summary(pl.UTF-8):	Łatwa w użyciu biblioteka do logowania
 Name:		liblogging
 Version:	1.0.6
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries
 Source0:	https://download.rsyslog.com/liblogging/%{name}-%{version}.tar.gz
